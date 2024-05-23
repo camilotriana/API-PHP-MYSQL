@@ -26,7 +26,13 @@ class ControllerPrinter
     {
         try {
             $response = Printer::updatePrinter($id_inventario, $serial, $marca);
-            return $response;
+            
+            if($response){
+                return self::getPrinter($id_inventario);
+            }else{
+                return false;
+            }
+
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
@@ -36,7 +42,13 @@ class ControllerPrinter
     {
         try {
             $response = Printer::updateSerialPrinter($id_inventario, $serial);
-            return $response;
+            
+            if($response){
+                return self::getPrinter($id_inventario);
+            }else{
+                return false;
+            }
+            
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }

@@ -21,7 +21,7 @@ class Printer extends System
         $stmt->bindParam(':serial', $serial);
         $stmt->bindParam(':marca', $marca);
 
-        return ($stmt->execute()) ? true : false;
+        return $stmt->execute();
     }
 
     public static function updateSerialPrinter($id_inventario, $serial){
@@ -30,7 +30,7 @@ class Printer extends System
         $stmt->bindParam(':id_inventario', $id_inventario);
         $stmt->bindParam(':serial', $serial);
 
-        return ($stmt->execute()) ? true : false;
+        return $stmt->execute();
     }
 
     public static function getPrinter($id_inventario){

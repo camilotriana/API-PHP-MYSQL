@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
 }
 
 //LISTA DE REGISTROS POR MARCA
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['marca'])) {
-    $response = ControllerPrinter::listPrinterByMarca($_POST['marca']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_marca'])) {
+    $response = ControllerPrinter::listPrinterByMarca($_POST['search_marca']);
     echo json_encode($response);
 }
 
