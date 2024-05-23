@@ -5,27 +5,31 @@ METODOS Y ACCESOS A LAS DIFERENTES FUNCIONES DE LA API:
 
 GET:
 
-Parametro                         Descripcion
-id_inventario                     Consulta informacion del inventario por id.
-allPrint                          Consulta toda la informacion del inventario.
+Parametro: id_inventario                     
+Descripcion: Consulta informacion del inventario por id
+
+Parametro: allPrint
+Descripcion: Consulta toda la informacion del inventario.
 
 POST:
 
-Form-data                         Descripcion
-newPrint, serial, marca           Crea un nuevo registro en el inventario.
-search_marca                      Consulta informacion del inventario por marca.
+Form-data: newPrint, serial, marca           
+Descripcion: Crea un nuevo registro en el inventario.
+
+Form-data: search_marca           
+Descripcion: Consulta informacion del inventario por marca.
 
 PUT:
 
-Json-data                         Descripcion
-id_inventario, serial, marca      Actualiza informacion del inventario por id.     
+Json-data: id_inventario, serial, marca
+Descripcion: Actualiza informacion del inventario por id.     
 
 PATCH:
 
-Json-data                         Descripcion
-id_inventario, serial             Actualiza el serial por id.  
+Json-data: id_inventario, serial                          
+Descripcion: Actualiza el serial por id.  
 
 DELETE:
 
-Parametro                         Descripcion
-id_inventario                     Elimina informacion del inventario por id.
+Parametro: id_inventario                        
+Descripcion: Elimina informacion del inventario por id.
