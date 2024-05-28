@@ -2,10 +2,21 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/ControllerPrinter.php';
 
 //CREAR REGISTRO NUEVO
-if (isset($_POST['newPrint'])) {
+/*if (isset($_POST['newPrint'])) {
     $response = ControllerPrinter::createPrinter($_POST['serial'], $_POST['marca']);
     echo json_encode($response);
+}*/
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $datos = json_decode(file_get_contents('php://input'));
+
+    if ($datos != NULL) {
+        $response = ControllerPrinter::createPrinter($datos->serial, $datos->marca);
+        echo json_encode($response);
+    }
 }
+
+
 
 //ACTUALIZAR REGISTRO COMPLETO
 if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
